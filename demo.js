@@ -9,4 +9,7 @@ let server = http.createServer((req,res)=>{
 server.on("request",(req,res)=>{
     console.log("hello,world")
 })
+server.on("close",()=>{
+    console.log("服务器关闭了..")
+})
 server.listen(8080);
